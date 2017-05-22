@@ -1,0 +1,19 @@
+#Mon May 22 15:23:24 IST 2017
+renamed.5=classes3.dex
+renamed.4=classes6.dex
+renamed.3=classes5.dex
+renamed.2=classes2.dex
+renamed.1=classes4.dex
+renamed.0=classes.dex
+base.5=C\:\\Users\\ricktamkundu\\Documents\\My Received Files\\mqtt\\mqtt\\mQTTclient\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\classes_f6ed0bab61e014f640b26d03480f9d95c72a5433
+base.4=C\:\\Users\\ricktamkundu\\Documents\\My Received Files\\mqtt\\mqtt\\mQTTclient\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\2\\org.eclipse.paho.client.mqttv3_a31f1369de0952586a4cd20b86667e718ea36c7b
+base.3=C\:\\Users\\ricktamkundu\\Documents\\My Received Files\\mqtt\\mqtt\\mQTTclient\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\support-annotations-23.0.1_6389c75ae9b366792bafddd6de334db78329a162
+base.2=C\:\\Users\\ricktamkundu\\Documents\\My Received Files\\mqtt\\mqtt\\mQTTclient\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\classes_e02153a277df4d11b674a93e9f58061cb3d2bb0e
+base.1=C\:\\Users\\ricktamkundu\\Documents\\My Received Files\\mqtt\\mqtt\\mQTTclient\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\internal_impl-23.0.1_7d0c19dfc34eabd8628d6d4e1bcbbe8d7496f0ff
+base.0=C\:\\Users\\ricktamkundu\\Documents\\My Received Files\\mqtt\\mqtt\\mQTTclient\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\classes_abbb7d1ea6984fd32108ac8b093fe7377b96b334
+file.5=C\:\\Users\\ricktamkundu\\Documents\\My Received Files\\mqtt\\mqtt\\mQTTclient\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\classes_f6ed0bab61e014f640b26d03480f9d95c72a5433\\classes.dex
+file.4=C\:\\Users\\ricktamkundu\\Documents\\My Received Files\\mqtt\\mqtt\\mQTTclient\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\2\\org.eclipse.paho.client.mqttv3_a31f1369de0952586a4cd20b86667e718ea36c7b\\classes.dex
+file.3=C\:\\Users\\ricktamkundu\\Documents\\My Received Files\\mqtt\\mqtt\\mQTTclient\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\support-annotations-23.0.1_6389c75ae9b366792bafddd6de334db78329a162\\classes.dex
+file.2=C\:\\Users\\ricktamkundu\\Documents\\My Received Files\\mqtt\\mqtt\\mQTTclient\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\classes_e02153a277df4d11b674a93e9f58061cb3d2bb0e\\classes.dex
+file.1=C\:\\Users\\ricktamkundu\\Documents\\My Received Files\\mqtt\\mqtt\\mQTTclient\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\internal_impl-23.0.1_7d0c19dfc34eabd8628d6d4e1bcbbe8d7496f0ff\\classes.dex
+file.0=C\:\\Users\\ricktamkundu\\Documents\\My Received Files\\mqtt\\mqtt\\mQTTclient\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\classes_abbb7d1ea6984fd32108ac8b093fe7377b96b334\\classes.dex

@@ -1,0 +1,26 @@
+[
+    {
+        "outputFile": "C:\\Users\\ricktamkundu\\Documents\\My Received Files\\mqtt\\mqtt\\mQTTclient\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-xlarge-land-v4\\values-xlarge-land-v4.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 63,
+                    "endOffset": 114
+                },
+                "from": {
+                    "file": "C:\\Users\\ricktamkundu\\.android\\build-cache\\03725411986fe9510c57c240a3487c5c3f887ca6\\output\\res\\values-xlarge-land\\values-xlarge-land.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 288,
+                        "endColumn": 63,
+                        "endOffset": 347
+                    }
+                }
+            }
+        ]
+    }
+]

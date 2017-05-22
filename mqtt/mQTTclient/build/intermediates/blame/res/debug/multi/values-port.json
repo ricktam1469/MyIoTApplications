@@ -1,0 +1,26 @@
+[
+    {
+        "outputFile": "C:\\Users\\ricktamkundu\\Documents\\My Received Files\\mqtt\\mqtt\\mQTTclient\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-port\\values-port.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 55,
+                    "endOffset": 106
+                },
+                "from": {
+                    "file": "C:\\Users\\ricktamkundu\\.android\\build-cache\\03725411986fe9510c57c240a3487c5c3f887ca6\\output\\res\\values-port\\values-port.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 280,
+                        "endColumn": 55,
+                        "endOffset": 331
+                    }
+                }
+            }
+        ]
+    }
+]
