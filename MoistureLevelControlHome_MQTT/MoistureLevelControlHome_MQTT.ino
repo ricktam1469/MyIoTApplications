@@ -7,6 +7,9 @@
 const char* ssid = "RicktamNw";
 const char* password = "tom_116164";
 const char* mqtt_server = "iot.eclipse.org";
+//char* receivedPayload;
+int flag1=0,flag2=1;
+int receivedMsg=0;
 
 WiFiClient espClient;
 PubSubClient client(espClient);
@@ -44,18 +47,30 @@ void callback(char* topic, byte* payload, unsigned int length) {
   Serial.print(topic);
   Serial.print("] ");
   for (int i = 0; i < length; i++) {
+   // receivedPayload[i]=((char)payload[i]);
     Serial.print((char)payload[i]);
+    //receivedMsg=((int)((char)payload[i]));
   }
-  Serial.println();
-
-  // Switch on the LED if an 1 was received as first character
+  Serial.print("-------->");
+//Serial.println(receivedPayload);
+//delay(5000);
+//flag=1;
+if ((char)payload[0] == 'U') {
+  flag2=-1;
+  delay(1000);
   if ((char)payload[0] == '1') {
-    digitalWrite(BUILTIN_LED, LOW);   // Turn the LED on (Note that LOW is the voltage level
-    // but actually the LED is on; this is because
-    // it is acive low on the ESP-01)
-  } else {
-    digitalWrite(BUILTIN_LED, HIGH);  // Turn the LED off by making the voltage HIGH
+    //digitalWrite(BUILTIN_LED, LOW);   // Turn the LED on (Note that LOW is the voltage level
+    flag1=1;
+   
+  } else if ((char)payload[0] == '0') {
+    //digitalWrite(BUILTIN_LED, HIGH);  // Turn the LED off by making the voltage HIGH
+    flag1=-1;
   }
+}
+else if ((char)payload[0] == 'A') {
+  flag2=1;
+}
+ 
 
 }
 
@@ -72,7 +87,8 @@ void reconnect() {
       // Once connected, publish an announcement...
       //client.publish("outTopic", "hello world");
       // ... and resubscribe
-      client.subscribe("inTopic");
+      client.subscribe("Control/Motor");
+      client.subscribe("Control/Motor/Mode");
     } else {
       Serial.print("failed, rc=");
       Serial.print(client.state());
@@ -91,6 +107,7 @@ void setup() {
   setup_wifi();
   client.setServer(mqtt_server, 1883);
   client.setCallback(callback);
+  
 }
 
 void loop() {
@@ -104,26 +121,42 @@ void loop() {
  // if (now - lastMsg > 2000) {
    // lastMsg = now;
     //++value;
-    if(sensorValue>250)
-    {
-        snprintf (msgMoisture, 75, "Moisture Level is #%ld (Need Water) ", sensorValue);
-        snprintf (msgMotor, 75, "Motor is running ", sensorValue);
-        Serial.print("Publish message: ");
-       // Serial.println(msg);
-        client.publish("Sensor/Moisture", msgMoisture);
-        client.publish("Sensor/Motor", msgMotor);
-        digitalWrite(RELAY1,0);           // Turns ON Relays 1
+   if(flag2==1){
 
-    }
-    else{
-       snprintf (msgMoisture, 75, "Moisture Level is #%ld (Need Water) ", sensorValue);
-        snprintf (msgMotor, 75, "Motor is Stopped ", sensorValue);
-        Serial.print("Publish message: ");
-       // Serial.println(msg);
-        client.publish("Sensor/Moisture", msgMoisture);
-        client.publish("Sensor/Motor", msgMotor);
-        digitalWrite(RELAY1,1);           // Turns ON Relays 1
-    }
+        if(sensorValue>250)
+      {
+          snprintf (msgMoisture, 75, "Moisture Level is #%ld (Need Water) ", sensorValue);
+          snprintf (msgMotor, 75, "Motor is running ", sensorValue);
+          Serial.println("Publish message <250: ");
+         // Serial.println(msg);
+          client.publish("Sensor/Moisture", msgMoisture);
+          client.publish("Sensor/Motor", msgMotor);
+          digitalWrite(RELAY1,0);           // Turns ON Relays 1
+  
+      }
+      else{
+         snprintf (msgMoisture, 75, "Moisture Level is #%ld (Need Water) ", sensorValue);
+          snprintf (msgMotor, 75, "Motor is stopped ", sensorValue);
+          Serial.println("Publish message >250: ");
+         // Serial.println(msg);
+          client.publish("Sensor/Moisture", msgMoisture);
+          client.publish("Sensor/Motor", msgMotor);
+          digitalWrite(RELAY1,1);           // Turns ON Relays 1
+      }
+    
+   }
+   if(flag1==1){
+    Serial.println("Motor Running");
+      digitalWrite(RELAY1,0);           // Turns ON Relays 1
+   }
+   else if(flag1==-1){
+    Serial.println("Motor Stopped");
+      digitalWrite(RELAY1,1);           // Turns ON Relays 1
+   }
+    
+
+    //client.subscribe("Control/Motor");
+    //client.subscribe("Control/Motor/Mode");
     //snprintf (msg, 75, "Voltage level of Moisture is #%ld", sensorValue);
     //Serial.print("Publish message: ");
    // Serial.println(msg);
