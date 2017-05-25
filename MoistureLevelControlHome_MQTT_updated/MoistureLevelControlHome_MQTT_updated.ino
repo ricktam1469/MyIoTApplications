@@ -4,8 +4,8 @@
 #define RELAY1  5  
 // Update these with values suitable for your network.
 
-const char* ssid = "Handheld-Devices";
-const char* password = "admin123";
+const char* ssid = "RicktamNw";
+const char* password = "tom_116164";
 const char* mqtt_server = "iot.eclipse.org";
 //char* receivedPayload;
 int flag1=0,flag2=1;
@@ -161,10 +161,11 @@ void loop() {
    if(flag1==1){
     Serial.println("Motor Running");
       digitalWrite(RELAY1,0);           // Turns ON Relays 1
+      flag1=0;
    }
    else if(flag1==-1){
     Serial.println("Motor Stopped");
-      digitalWrite(RELAY1,1);           // Turns ON Relays 1
+      digitalWrite(RELAY1,1);           // Turns OFF Relays 1
       flag1=0;
    }
      
